@@ -102,7 +102,7 @@ const displayProductDetails = (id) => {
           <img class="product-image pr-3" src="${data.image}">
         </div>
           <div>
-            <p class ="m-0">Description: </p>
+            <p class ="m-0">Details: </p>
             <h5 class="card-title"> ${data.title}</h5>
             <p class="card-text">${data.description.slice(0, 150)}</p>
             <p class = "text-warning">Rating: ${data.rating.rate} (${
