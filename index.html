@@ -31,6 +31,7 @@
 
   <body>
     <header>
+      <!-- shop name -->
       <div class="text-center">
         <h1>Fly Buy Store</h1>
         <small class="text-success"
@@ -42,7 +43,7 @@
     <div class="w-50 mx-auto" id="display-product-details"></div>
 
     <main class="main">
-      <!-- enter product for search -->
+      <!-- Enter product for search -->
       <div class="w-50 mx-auto input-group my-3">
         <input
           id="input-field"
@@ -54,7 +55,8 @@
         />
         <div class="input-group-append">
           <button
-            class="btn btn-outline-primary"
+            onclick="searchProduct()"
+            class="btn btn-outline-success"
             type="button"
             id="button-addon2 search-btn"
           >
@@ -62,13 +64,12 @@
           </button>
         </div>
       </div>
-
+      <!-- display all products name, price, rating etc in the card -->
       <div class="row">
         <div class="col-md-9 col-lg-9 col-sm-7">
-          <div id="all-products" class="">
-            <!-- <h1></h1> -->
-          </div>
+          <div id="all-products" class=""></div>
         </div>
+        <!-- display cart with price, total etc -->
         <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
           <div class="cart" id="my-cart">
             <table class="table">
@@ -114,7 +115,9 @@
               </tbody>
             </table>
             <div class="parces text-center">
-              <button class="btn btn-primary text-center">Buy Now</button>
+              <button class="btn btn-outline-success text-center">
+                Buy Now
+              </button>
             </div>
           </div>
         </div>

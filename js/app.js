@@ -1,7 +1,7 @@
 // load product from the api
 const loadProducts = () => {
   const url = `https://fakestoreapi.com/products`;
-  // const url = `../json/db.json`;
+  // const url = `../json/productsDb.json`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
@@ -21,7 +21,7 @@ const showProducts = (products) => {
       <div>
         <img class="product-image" src="${image}"></img>
       </div>
-      <h4 class = "cut-text">${product.title}</h4>
+      <h4 class = "cut-title-text">${product.title}</h4>
       <p>Category: ${product.category}</p>
       <p>Rating: ${product.rating.rate}(${product.rating.count}) </p>
       <h4 class = "text-warning">Price: $ ${product.price}</h4>
@@ -31,6 +31,7 @@ const showProducts = (products) => {
     document.getElementById("all-products").appendChild(div);
   }
 };
+// update cart property value
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
@@ -106,4 +107,6 @@ const displayProductDetails = (id) => {
       console.log(data);
     });
 };
+
+// call the function for load product
 loadProducts();
