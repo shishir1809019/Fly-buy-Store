@@ -97,10 +97,18 @@ const displayProductDetails = (id) => {
     .then((data) => {
       document.getElementById("display-product-details").innerHTML = `
       <div class="card">
-        <div class="card-body">
-          <p class ="m-0">Description</p>
-          <h5 class="card-title"> ${data.title}</h5>
-          <p class="card-text">${data.description.slice(0, 150)}</p>
+        <div class="card-body d-flex">
+        <div>
+          <img class="product-image pr-3" src="${data.image}">
+        </div>
+          <div>
+            <p class ="m-0">Description: </p>
+            <h5 class="card-title"> ${data.title}</h5>
+            <p class="card-text">${data.description.slice(0, 150)}</p>
+            <p class = "text-warning">Rating: ${data.rating.rate} (${
+        data.rating.count
+      } people rate this product)</p>
+          </div>
         </div>
       </div>
       `;
